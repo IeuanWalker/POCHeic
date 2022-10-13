@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center mt-4">
+    <h1 class="display-4 p-5">Heic to JPEG</h1>
+        
+    <form method="post" enctype="multipart/form-data">
+        <div class="input-group">
+            <input asp-for="Upload" type="file" class="form-control form-control-lg" placeholder="Select a image file" />
+            <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Convert</button>
+        </div>
+        <span style="color:red" asp-validation-for="Upload"></span>
+    </form>
+
+</div>
